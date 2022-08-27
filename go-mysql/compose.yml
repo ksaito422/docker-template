@@ -11,3 +11,17 @@ services:
     tty: true
     container_name: go-backend-db
 
+  db:
+    image: mysql:8.0
+    volumes:
+      - ./docker/db/data:/var/lib/mysql
+      - ./docker/db/my.cnf:/etc/mysql/conf.d
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=default
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=secret
+      - TZ=Asia/Tokyo
+    container_name: db-backend-go

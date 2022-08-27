@@ -14,8 +14,6 @@ v2.7.0
 ## Usage
 
 ```
-git clone https://github.com/saitooooooo/go-docker.git
-
 docker compose build
 docker compose up -d
 docker compose exec backend go run main.go

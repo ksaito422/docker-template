@@ -1,0 +1,13 @@
+services:
+  backend:
+    build:
+      context: ./docker/backend
+      dockerfile: Dockerfile
+    volumes:
+      - .:/go/src/app
+    ports:
+      - "8000:8000"
+    stdin_open: true
+    tty: true
+    container_name: go-backend-db
+

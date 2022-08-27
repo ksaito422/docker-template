@@ -9,6 +9,8 @@ services:
       - "8000:8000"
     stdin_open: true
     tty: true
+    environment:
+      - TZ=Asia/Tokyo
     container_name: go-backend-db
 
   db:

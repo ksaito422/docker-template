@@ -5,9 +5,14 @@ ARG RUBYGEMS_VERSION=3.3.20
 RUN mkdir /app
 WORKDIR /app
 
+# install nodejs(LTS)
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs
+
+# install yarn
+RUN npm install --global yarn
+
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
-
 
 RUN gem update --system ${RUBYGEMS_VERSION} && \
 	bundle install

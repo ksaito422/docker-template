@@ -13,10 +13,10 @@ Things you may want to cover:
 * setup
 
 ```bash
-docker-compose build --no-cache
-docker-compose run web rails new . --force --no-deps --database=postgresql
+docker compose build --no-cache
+docker compose run web rails new . --force --no-deps --database=postgresql
 # or
-docker-compose run web rails new . --force --no-deps --database=postgresql --api
+docker compose run web rails new . --force --no-deps --database=postgresql --api
 ```
 
 ```yml
@@ -31,8 +31,8 @@ default: &default
 ```
 
 ```bash
-docker-compose run web rails db:create
-docker-compose up -d
+docker compose run web rails db:create
+docker compose up -d
 ```
 
 open http://localhost:3001

@@ -7,8 +7,8 @@ Things you may want to cover:
 
 * version
 
-- Ruby v3.2.2
-- Rails v7.0.4.3
+- Ruby v3.0.6
+- Rails v7.0.5
 
 * setup
 
